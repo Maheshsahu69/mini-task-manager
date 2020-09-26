@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+/* Skip to content
+Why GitHub? 
+Team
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+kirandash
+/
+todo-app
+111
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Join GitHub today
+GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together. */
+
+/* todo-app/css/style.css
+@kirandash
+kirandash Modified stylings
+Latest commit 41aee8c on 7 Apr 2019
+ History
+ 1 contributor
+70 lines (60 sloc)  1.06 KB
+  */
+body{
+    margin: 0;
+    padding: 0;
+    background: #a52a2a;
+    font-family: cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title {
+    margin: 0;
+    padding: 10px;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div.todo-list {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.todo {
+    height: 94px;
+    width: 430px;
+    background-color: #ffe000;
+    margin: 20px 25px;
+    cursor: -webkit-grab;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    float: left;
+    padding: 10px;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+div.todo:active {
+    cursor: -webkit-grabbing;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.todo h3 {
+    font-size: 16px;
+    padding: 5px;
+    margin: 0 0 5px 0;
+}
+
+div.todo:hover > span {
+    opacity: 1;
+}
+
+div.todo > span {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    opacity: 0;
+    transition: opacity .25s linear;
+}
+
+div.todo button {
+    margin: 2px;
+}
+
+div.todo > textarea {
+    height: 50%;
+    background: rgba(255, 255, 255, .5);
+    margin: 0 0 1px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.glyphicon-plus {
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
